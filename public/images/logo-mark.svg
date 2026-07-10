@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lisbon Shore Excursions">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f5f86"/>
+      <stop offset="100%" stop-color="#163048"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="32" fill="url(#g)"/>
+  <path d="M12 40c6-10 12-14 20-14s14 4 20 14" fill="none" stroke="#e0d0b8" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M18 36c4-6 8-9 14-9s10 3 14 9" fill="none" stroke="#c9ae86" stroke-width="1.6" stroke-linecap="round"/>
+  <rect x="28" y="18" width="8" height="14" rx="1.5" fill="#f5f0e8"/>
+  <path d="M26 18h12l-2-5h-8l-2 5z" fill="#a85d3f"/>
+  <circle cx="32" cy="24" r="1.4" fill="#2f5f86"/>
+</svg>

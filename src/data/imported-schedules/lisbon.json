@@ -1,0 +1,132 @@
+[
+  {
+    "date": "2026-04-10",
+    "ship": "MSC Virtuosa",
+    "cruiseLine": "MSC Cruises",
+    "arrival": "07:00",
+    "departure": "18:00",
+    "timeInPort": "11h",
+    "terminal": "Jardim do Tabaco Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-04-22",
+    "ship": "Costa Diadema",
+    "cruiseLine": "Costa Cruises",
+    "arrival": "08:00",
+    "departure": "17:00",
+    "timeInPort": "9h",
+    "terminal": "Santa Apolónia Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-05-08",
+    "ship": "Celebrity Apex",
+    "cruiseLine": "Celebrity Cruises",
+    "arrival": "07:30",
+    "departure": "18:30",
+    "timeInPort": "11h",
+    "terminal": "Alcântara Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-05-21",
+    "ship": "Norwegian Viva",
+    "cruiseLine": "Norwegian Cruise Line",
+    "arrival": "08:00",
+    "departure": "17:00",
+    "timeInPort": "9h",
+    "terminal": "Jardim do Tabaco Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-06-05",
+    "ship": "Royal Caribbean Odyssey",
+    "cruiseLine": "Royal Caribbean",
+    "arrival": "07:00",
+    "departure": "19:00",
+    "timeInPort": "12h",
+    "terminal": "Santa Apolónia Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-06-19",
+    "ship": "MSC Seaview",
+    "cruiseLine": "MSC Cruises",
+    "arrival": "08:00",
+    "departure": "18:00",
+    "timeInPort": "10h",
+    "terminal": "Alcântara Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-07-03",
+    "ship": "Celebrity Edge",
+    "cruiseLine": "Celebrity Cruises",
+    "arrival": "07:30",
+    "departure": "17:30",
+    "timeInPort": "10h",
+    "terminal": "Jardim do Tabaco Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-07-17",
+    "ship": "Costa Smeralda",
+    "cruiseLine": "Costa Cruises",
+    "arrival": "08:00",
+    "departure": "18:00",
+    "timeInPort": "10h",
+    "terminal": "Santa Apolónia Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-08-07",
+    "ship": "Viking Venus",
+    "cruiseLine": "Viking Ocean",
+    "arrival": "08:00",
+    "departure": "17:00",
+    "timeInPort": "9h",
+    "terminal": "Alcântara Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-08-21",
+    "ship": "MSC Grandiosa",
+    "cruiseLine": "MSC Cruises",
+    "arrival": "07:00",
+    "departure": "18:00",
+    "timeInPort": "11h",
+    "terminal": "Jardim do Tabaco Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-09-04",
+    "ship": "Norwegian Dawn",
+    "cruiseLine": "Norwegian Cruise Line",
+    "arrival": "08:00",
+    "departure": "17:00",
+    "timeInPort": "9h",
+    "terminal": "Santa Apolónia Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-09-18",
+    "ship": "Celebrity Constellation",
+    "cruiseLine": "Celebrity Cruises",
+    "arrival": "07:30",
+    "departure": "18:00",
+    "timeInPort": "10h 30m",
+    "terminal": "Alcântara Cruise Terminal",
+    "callType": "Port of call"
+  },
+  {
+    "date": "2026-10-09",
+    "ship": "Costa Fortuna",
+    "cruiseLine": "Costa Cruises",
+    "arrival": "08:00",
+    "departure": "17:00",
+    "timeInPort": "9h",
+    "terminal": "Jardim do Tabaco Cruise Terminal",
+    "callType": "Port of call"
+  }
+]
