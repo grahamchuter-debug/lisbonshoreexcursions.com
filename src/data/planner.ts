@@ -101,14 +101,16 @@ function excursionLink(slug: string, why: string): PlannerLink | null {
   return { label: e.title, href: `/shore-excursions/${slug}`, why };
 }
 
-function usableHours(input: PlannerInput): number {
+function usableHours(input: PlannerInput): number | null {
   if (input.arrivalTime && input.departureTime) {
     const [aH, aM] = input.arrivalTime.split(":").map(Number);
     const [dH, dM] = input.departureTime.split(":").map(Number);
-    const raw = (dH * 60 + dM - (aH * 60 + aM)) / 60;
+    let minutes = dH * 60 + dM - (aH * 60 + aM);
+    if (minutes < 0) minutes += 24 * 60;
+    const raw = minutes / 60;
     return Math.max(0, raw - 1.5);
   }
-  return 7.5;
+  return null;
 }
 
 function pickTheme(input: PlannerInput): keyof typeof ITINERARY_THEMES {
@@ -123,7 +125,8 @@ function pickTheme(input: PlannerInput): keyof typeof ITINERARY_THEMES {
   if (active.includes("heritage")) return "best-historic";
   if (active.includes("lisbon")) return "best-historic";
   if (active.includes("sintra")) return "editors-choice";
-  if (usableHours(input) < 6) return "best-families";
+  const hrs = usableHours(input);
+  if (hrs !== null && hrs < 6) return "best-families";
   return "editors-choice";
 }
 
@@ -150,7 +153,7 @@ export function generatePortugalPlan(input: PlannerInput): PlannerResult {
   if (hasKids) pushSlug("classic-lisbon-half-day");
   if (travelStyle === "diy") pushSlug("discover-lisbon-on-foot");
   if (budget === "premium") pushSlug("private-spirit-of-lisbon");
-  if (hours < 6) pushSlug("classic-lisbon-half-day");
+  if (hours !== null && hours < 6) pushSlug("classic-lisbon-half-day");
 
   const reasonMap: Record<string, string> = {
     "sintra-cascais-full-day": "Editor's Choice — Pena Palace and Cascais coast for first-timers.",
@@ -245,10 +248,12 @@ export function generatePortugalPlan(input: PlannerInput): PlannerResult {
     .toLowerCase();
 
   const styleLabel = travelStyle === "diy" ? "independent" : "guided";
+  const hoursLabel =
+    hours !== null ? ` (~${hours.toFixed(1)} usable hours)` : " (hours ashore from published times when both are known)";
 
   return {
     headline: theme.headline,
-    summary: `${theme.summary} A Lisbon port day (~${hours.toFixed(1)} usable hours) for ${party} guest${party === 1 ? "" : "s"} interested in ${interestLabels}, preferring ${styleLabel} travel.`,
+    summary: `${theme.summary} A Lisbon port day${hoursLabel} for ${party} guest${party === 1 ? "" : "s"} interested in ${interestLabels}, preferring ${styleLabel} travel.`,
     excursions: excursionLinks.slice(0, 5),
     transfers,
     stay: [],

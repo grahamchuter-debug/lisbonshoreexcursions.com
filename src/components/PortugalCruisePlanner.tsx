@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { jsPDF } from "jspdf";
 import {
@@ -9,6 +9,9 @@ import {
   type PlannerInput,
   type PlannerResult,
 } from "@/data/planner";
+import { getScheduleEntries } from "@/data/schedules";
+import { getEntriesForDate } from "@/lib/schedule-utils";
+import type { ScheduleEntry } from "@/data/types";
 
 function Section({ title, links }: { title: string; links: PlannerResult["excursions"] }) {
   if (!links.length) return null;
@@ -27,9 +30,24 @@ function Section({ title, links }: { title: string; links: PlannerResult["excurs
   );
 }
 
+function realTime(value: string | undefined): string {
+  const v = (value || "").trim();
+  if (!v || v === "00:00" || v === "0:00") return "";
+  return v;
+}
+
 export function PortugalCruisePlanner() {
-  const [arrivalTime, setArrivalTime] = useState("07:30");
-  const [departureTime, setDepartureTime] = useState("17:00");
+  const schedule = useMemo(() => getScheduleEntries("lisbon"), []);
+  const dates = useMemo(
+    () => [...new Set(schedule.map((e) => e.date))].sort(),
+    [schedule],
+  );
+
+  const [callDate, setCallDate] = useState("");
+  const [shipName, setShipName] = useState("");
+  const [manualTimes, setManualTimes] = useState(false);
+  const [arrivalTime, setArrivalTime] = useState("");
+  const [departureTime, setDepartureTime] = useState("");
   const [adults, setAdults] = useState("2");
   const [children, setChildren] = useState("0");
   const [interests, setInterests] = useState<string[]>(["sintra", "lisbon"]);
@@ -38,6 +56,60 @@ export function PortugalCruisePlanner() {
   const [travelStyle, setTravelStyle] = useState<PlannerInput["travelStyle"]>("guided");
   const [plan, setPlan] = useState<PlannerResult | null>(null);
 
+  const shipsOnDate: ScheduleEntry[] = useMemo(() => {
+    if (!callDate) return [];
+    return getEntriesForDate(schedule, callDate);
+  }, [schedule, callDate]);
+
+  function applyShipSelection(date: string, ship: string) {
+    setCallDate(date);
+    setShipName(ship);
+    const matches = getEntriesForDate(schedule, date).filter((e) => e.ship === ship);
+    if (matches.length === 1) {
+      const a = realTime(matches[0].arrival);
+      const d = realTime(matches[0].departure);
+      setArrivalTime(a);
+      setDepartureTime(d);
+      setManualTimes(!(a && d));
+    } else if (matches.length > 1) {
+      setArrivalTime("");
+      setDepartureTime("");
+      setManualTimes(true);
+    } else {
+      setArrivalTime("");
+      setDepartureTime("");
+      setManualTimes(true);
+    }
+  }
+
+  function onDateChange(date: string) {
+    setCallDate(date);
+    setShipName("");
+    setArrivalTime("");
+    setDepartureTime("");
+    setPlan(null);
+    const matches = date ? getEntriesForDate(schedule, date) : [];
+    if (matches.length === 1) {
+      applyShipSelection(date, matches[0].ship);
+    } else if (matches.length === 0) {
+      setManualTimes(true);
+    } else {
+      setManualTimes(false);
+    }
+  }
+
+  function onShipChange(ship: string) {
+    if (!callDate) return;
+    if (!ship) {
+      setShipName("");
+      setArrivalTime("");
+      setDepartureTime("");
+      setManualTimes(true);
+      return;
+    }
+    applyShipSelection(callDate, ship);
+  }
+
   function toggleInterest(id: string) {
     setInterests((prev) => (prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]));
   }
@@ -45,8 +117,8 @@ export function PortugalCruisePlanner() {
   function generate() {
     setPlan(
       generatePortugalPlan({
-        arrivalTime,
-        departureTime,
+        arrivalTime: realTime(arrivalTime) || undefined,
+        departureTime: realTime(departureTime) || undefined,
         adults: Number(adults) || 1,
         children: Number(children) || 0,
         interests,
@@ -93,16 +165,84 @@ export function PortugalCruisePlanner() {
     doc.save("portugal-cruise-plan.pdf");
   }
 
+  const noMatch = Boolean(callDate) && shipsOnDate.length === 0;
+
   return (
     <div className="card-feature">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Port call date</label>
+          <input
+            type="date"
+            value={callDate}
+            onChange={(e) => onDateChange(e.target.value)}
+            list="lisbon-call-dates"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          />
+          <datalist id="lisbon-call-dates">
+            {dates.map((d) => (
+              <option key={d} value={d} />
+            ))}
+          </datalist>
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Ship</label>
+          <select
+            value={shipName}
+            onChange={(e) => onShipChange(e.target.value)}
+            disabled={!callDate || shipsOnDate.length === 0}
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm disabled:bg-gray-50"
+          >
+            <option value="">
+              {!callDate
+                ? "Choose a date first"
+                : shipsOnDate.length === 0
+                  ? "No published match — enter times manually"
+                  : shipsOnDate.length === 1
+                    ? shipsOnDate[0].ship
+                    : "Choose your ship"}
+            </option>
+            {shipsOnDate.map((e) => (
+              <option key={`${e.date}-${e.ship}`} value={e.ship}>
+                {e.ship} ({e.cruiseLine})
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {(manualTimes || noMatch || !callDate) && (
+          <div className="sm:col-span-2 rounded-lg border border-amber-100 bg-amber-50/80 px-3 py-2 text-xs text-amber-950">
+            {noMatch
+              ? "No published ship for that date — enter arrival and departure manually."
+              : manualTimes && shipName
+                ? "Published times are incomplete for this call — enter times manually or confirm with your cruise line."
+                : "Select your date and ship to pre-fill published times, or enter times manually."}
+          </div>
+        )}
+
+        <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Arrival time (local)</label>
-          <input type="time" value={arrivalTime} onChange={(e) => setArrivalTime(e.target.value)} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+          <input
+            type="time"
+            value={arrivalTime}
+            onChange={(e) => {
+              setArrivalTime(e.target.value);
+              setManualTimes(true);
+            }}
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Departure / all-aboard time</label>
-          <input type="time" value={departureTime} onChange={(e) => setDepartureTime(e.target.value)} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+          <input
+            type="time"
+            value={departureTime}
+            onChange={(e) => {
+              setDepartureTime(e.target.value);
+              setManualTimes(true);
+            }}
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Adults</label>
@@ -131,57 +271,67 @@ export function PortugalCruisePlanner() {
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Mobility</label>
           <select value={mobility} onChange={(e) => setMobility(e.target.value as PlannerInput["mobility"])} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm">
-            <option value="full">Happy to walk a lot</option>
-            <option value="some">Some walking is fine</option>
-            <option value="limited">Limited mobility</option>
+            <option value="full">Full mobility</option>
+            <option value="some">Some walking</option>
+            <option value="limited">Limited walking</option>
           </select>
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Budget</label>
           <select value={budget} onChange={(e) => setBudget(e.target.value as PlannerInput["budget"])} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm">
-            <option value="budget">Budget</option>
+            <option value="budget">Value</option>
             <option value="mid">Mid-range</option>
             <option value="premium">Premium</option>
           </select>
         </div>
         <div className="sm:col-span-2">
-          <label className="block text-sm font-medium text-gray-700 mb-1">DIY or guided?</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Travel style</label>
           <select value={travelStyle} onChange={(e) => setTravelStyle(e.target.value as PlannerInput["travelStyle"])} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm">
-            <option value="guided">Prefer guided</option>
-            <option value="diy">Prefer DIY / independent</option>
+            <option value="guided">Guided excursions</option>
+            <option value="diy">Independent</option>
           </select>
         </div>
       </div>
+
       <div className="mt-6 flex flex-wrap gap-3">
-        <button type="button" onClick={generate} className="btn-primary">Build my Portugal plan</button>
-        {plan && <button type="button" onClick={downloadPdf} className="btn-secondary">Download PDF</button>}
+        <button type="button" onClick={generate} className="btn-primary text-sm">
+          Build my Portugal plan
+        </button>
+        {plan ? (
+          <button type="button" onClick={downloadPdf} className="btn-secondary text-sm">
+            Download PDF
+          </button>
+        ) : null}
       </div>
 
-      {plan && (
-        <div className="mt-8 space-y-8">
-          <div className="rounded-xl border border-coastal-200 bg-coastal-50 p-6">
-            <p className="text-xs font-semibold uppercase tracking-wide text-maple-600">Editorial recommendation</p>
-            <h3 className="font-display text-xl font-bold text-gray-900 mt-1">{plan.headline}</h3>
-            <p className="mt-2 text-sm text-gray-700 leading-relaxed">{plan.summary}</p>
+      <p className="mt-3 text-xs text-gray-500">
+        Guidance is indicative — always confirm your ship&apos;s all-aboard time and build a 60–90 minute return
+        buffer. Afternoon traffic on the IC19 to Sintra or the Marginal coast road can add 15–25 minutes. Hours
+        ashore are used only when both published arrival and departure times are known.
+      </p>
+
+      {plan ? (
+        <div className="mt-10 space-y-8">
+          <div>
+            <h2 className="section-title text-2xl mb-2">{plan.headline}</h2>
+            <p className="text-gray-700">{plan.summary}</p>
           </div>
-          <Section title="Recommended shore excursions" links={plan.excursions} />
-          {plan.transfers.length > 0 && <Section title="Port & transport" links={plan.transfers} />}
-          <Section title="Keep planning" links={plan.logistics} />
+          <Section title="Shore excursions" links={plan.excursions} />
+          <Section title="Port logistics" links={plan.transfers} />
+          <Section title="Planning links" links={plan.logistics} />
           <section>
             <h3 className="section-title text-xl mb-4">Your day plan</h3>
-            <ol className="relative space-y-4 border-l border-coastal-200 pl-6">
-              {plan.dayPlan.map((s, i) => (
-                <li key={i} className="relative">
-                  <span className="absolute -left-[27px] top-1 h-3 w-3 rounded-full bg-coastal-600" aria-hidden="true" />
-                  <p className="text-xs font-semibold uppercase tracking-wide text-coastal-700">{s.time}</p>
+            <ol className="space-y-3">
+              {plan.dayPlan.map((s) => (
+                <li key={s.time + s.text} className="rounded-lg border border-gray-100 bg-white p-4">
+                  <p className="text-sm font-semibold text-coastal-800">{s.time}</p>
                   <p className="mt-1 text-sm text-gray-700">{s.text}</p>
                 </li>
               ))}
             </ol>
           </section>
-          <p className="text-xs text-gray-500">Guidance is indicative — always confirm your ship&apos;s all-aboard time and build a 60–90 minute return buffer. Afternoon traffic on the IC19 to Sintra or the Marginal coast road can add 15–25 minutes.</p>
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

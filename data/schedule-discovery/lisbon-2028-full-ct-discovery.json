@@ -1,0 +1,1718 @@
+{
+  "port": "lisbon",
+  "year": 2028,
+  "wave": "wave-1a",
+  "note": "Internal CT discovery — not public without validation",
+  "total": 175,
+  "filterDecision": "PUBLISH",
+  "filterReason": "validated 24 >= MIN_PUBLISH_ROWS 15 — publish validated only; held 151 restricted/unvalidated",
+  "validatedCount": 24,
+  "calls": [
+    {
+      "date": "2028-01-01",
+      "ship": "Celestyal Discovery",
+      "cruiseLine": "Celestyal Cruises",
+      "arrival": "13:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-02",
+      "ship": "Borealis",
+      "cruiseLine": "Fred Olsen Cruise Lines",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-02",
+      "ship": "Mein Schiff Relax",
+      "cruiseLine": "TUI Cruises",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-03",
+      "ship": "AIDAmar",
+      "cruiseLine": "AIDA",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-03",
+      "ship": "Arcadia",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-03",
+      "ship": "Spirit Of Adventure",
+      "cruiseLine": "Saga Cruises",
+      "arrival": "08:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-04",
+      "ship": "AIDAsol",
+      "cruiseLine": "AIDA",
+      "arrival": "14:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-04",
+      "ship": "Oceania Aurelia",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": true
+    },
+    {
+      "date": "2028-01-06",
+      "ship": "Azamara Journey",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "11:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-15",
+      "ship": "AIDAsol",
+      "cruiseLine": "AIDA",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-15",
+      "ship": "Celestyal Discovery",
+      "cruiseLine": "Celestyal Cruises",
+      "arrival": "13:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-17",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-21",
+      "ship": "Azamara Journey",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-21",
+      "ship": "Queen Elizabeth",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-23",
+      "ship": "AIDAmar",
+      "cruiseLine": "AIDA",
+      "arrival": "16:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-23",
+      "ship": "Viking Star",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-29",
+      "ship": "Celestyal Discovery",
+      "cruiseLine": "Celestyal Cruises",
+      "arrival": "13:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-01-29",
+      "ship": "Queen Victoria",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-02-03",
+      "ship": "AIDAmar",
+      "cruiseLine": "AIDA",
+      "arrival": "08:00",
+      "departure": "15:30",
+      "callType": "Port of call",
+      "timeInPort": "7h 30m",
+      "publishable": false
+    },
+    {
+      "date": "2028-02-04",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-02-10",
+      "ship": "Queen Victoria",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-02-12",
+      "ship": "Celestyal Discovery",
+      "cruiseLine": "Celestyal Cruises",
+      "arrival": "13:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-02-16",
+      "ship": "Queen Victoria",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-02-19",
+      "ship": "Britannia",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-02-21",
+      "ship": "Viking Vela",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-02-23",
+      "ship": "Queen Victoria",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-03-09",
+      "ship": "Viking Sky",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-03-10",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-03-12",
+      "ship": "AIDAdiva",
+      "cruiseLine": "AIDA",
+      "arrival": "08:00",
+      "departure": "16:00",
+      "callType": "Port of call",
+      "timeInPort": "8h",
+      "publishable": false
+    },
+    {
+      "date": "2028-03-18",
+      "ship": "Silver Nova",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-03-21",
+      "ship": "Nieuw Statendam",
+      "cruiseLine": "Holland America Line",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-03-24",
+      "ship": "Azamara Journey",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "09:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-03-25",
+      "ship": "Ambience",
+      "cruiseLine": "Ambassador Cruise Line",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": false
+    },
+    {
+      "date": "2028-03-30",
+      "ship": "Britannia",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-03-30",
+      "ship": "Queen Victoria",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-01",
+      "ship": "Mein Schiff 2",
+      "cruiseLine": "TUI Cruises",
+      "arrival": "09:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-01",
+      "ship": "Silver Spirit",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-02",
+      "ship": "Europa 2",
+      "cruiseLine": "Hapag Lloyd",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-03",
+      "ship": "Wind Surf",
+      "cruiseLine": "Windstar Cruises",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-05",
+      "ship": "Britannia",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-05",
+      "ship": "Viking Mira",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-06",
+      "ship": "Seabourn Ovation",
+      "cruiseLine": "Seabourn",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-07",
+      "ship": "Crystal Serenity",
+      "cruiseLine": "Crystal Cruises",
+      "arrival": "06:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-08",
+      "ship": "Silver Dawn",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-09",
+      "ship": "Seven Seas Prestige",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "16:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-04-12",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-13",
+      "ship": "Mein Schiff 2",
+      "cruiseLine": "TUI Cruises",
+      "arrival": "21:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-14",
+      "ship": "Azamara Quest",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-14",
+      "ship": "Star Pride",
+      "cruiseLine": "Windstar Cruises",
+      "arrival": "12:00",
+      "departure": "22:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-15",
+      "ship": "Silver Ray",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-15",
+      "ship": "Viking Saturn",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-17",
+      "ship": "Norwegian Pearl",
+      "cruiseLine": "Norwegian Cruise Line",
+      "arrival": "09:00",
+      "departure": "15:00",
+      "callType": "Port of call",
+      "timeInPort": "6h",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-17",
+      "ship": "Viking Vela",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-18",
+      "ship": "Oceania Sonata",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-04-18",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-19",
+      "ship": "Sky Princess",
+      "cruiseLine": "Princess Cruises",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "11h",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-20",
+      "ship": "Seven Seas Prestige",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "16:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": true
+    },
+    {
+      "date": "2028-04-21",
+      "ship": "Norwegian Star",
+      "cruiseLine": "Norwegian Cruise Line",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-23",
+      "ship": "Silver Spirit",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-25",
+      "ship": "Caribbean Princess",
+      "cruiseLine": "Princess Cruises",
+      "arrival": "10:00",
+      "departure": "21:00",
+      "callType": "Port of call",
+      "timeInPort": "11h",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-27",
+      "ship": "Mein Schiff Relax",
+      "cruiseLine": "TUI Cruises",
+      "arrival": "08:00",
+      "departure": "22:00",
+      "callType": "Port of call",
+      "timeInPort": "14h",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-28",
+      "ship": "Explora V",
+      "cruiseLine": "Explora Journeys",
+      "arrival": "14:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-28",
+      "ship": "Seabourn Quest",
+      "cruiseLine": "Seabourn",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-04-30",
+      "ship": "Norwegian Dawn",
+      "cruiseLine": "Norwegian Cruise Line",
+      "arrival": "06:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-02",
+      "ship": "Explora II",
+      "cruiseLine": "Explora Journeys",
+      "arrival": "09:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-03",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-04",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-06",
+      "ship": "SeaDream II",
+      "cruiseLine": "SeaDream Yacht Club",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-06",
+      "ship": "Seven Seas Grandeur",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-05-08",
+      "ship": "Silver Spirit",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "08:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-09",
+      "ship": "Azamara Quest",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "06:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-10",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-10",
+      "ship": "Viking Vesta",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-11",
+      "ship": "Oceania Vista",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": true
+    },
+    {
+      "date": "2028-05-12",
+      "ship": "Seven Seas Voyager",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-05-15",
+      "ship": "Ambition",
+      "cruiseLine": "Ambassador Cruise Line",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-15",
+      "ship": "Viking Vela",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-17",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "11h",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-19",
+      "ship": "Seven Seas Mariner",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-05-20",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-21",
+      "ship": "Aurora",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-24",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-30",
+      "ship": "AIDAstella",
+      "cruiseLine": "AIDA",
+      "arrival": "14:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-30",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-30",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-31",
+      "ship": "AIDAprima",
+      "cruiseLine": "AIDA",
+      "arrival": "13:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-05-31",
+      "ship": "Viking Mars",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-02",
+      "ship": "Viking Jupiter",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-08",
+      "ship": "AIDAstella",
+      "cruiseLine": "AIDA",
+      "arrival": "14:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-09",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-09",
+      "ship": "Seven Seas Mariner",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-06-11",
+      "ship": "Arcadia",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-11",
+      "ship": "Crystal Serenity",
+      "cruiseLine": "Crystal Cruises",
+      "arrival": "13:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-14",
+      "ship": "Ambience",
+      "cruiseLine": "Ambassador Cruise Line",
+      "arrival": "09:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-14",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-15",
+      "ship": "Azamara Journey",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "06:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-15",
+      "ship": "Oceania Allura",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-06-19",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-20",
+      "ship": "Viking Lyra",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-23",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-25",
+      "ship": "Viking Sea",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-27",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "11h",
+      "publishable": false
+    },
+    {
+      "date": "2028-06-27",
+      "ship": "Oceania Marina",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-06-29",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-08",
+      "ship": "Oceania Aurelia",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "07:00",
+      "departure": "16:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": true
+    },
+    {
+      "date": "2028-07-09",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-10",
+      "ship": "Aurora",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-11",
+      "ship": "AIDAstella",
+      "cruiseLine": "AIDA",
+      "arrival": "14:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-11",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "11h",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-12",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-19",
+      "ship": "Europa 2",
+      "cruiseLine": "Hapag Lloyd",
+      "arrival": "12:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-19",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-20",
+      "ship": "AIDAstella",
+      "cruiseLine": "AIDA",
+      "arrival": "14:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-27",
+      "ship": "Europa",
+      "cruiseLine": "Hapag Lloyd",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-27",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-07-28",
+      "ship": "Seven Seas Explorer",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-07-29",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-06",
+      "ship": "Oceania Allura",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "08:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-08-08",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-08",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-14",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "11h",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-16",
+      "ship": "Seven Seas Explorer",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-08-18",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-20",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "07:00",
+      "departure": "16:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-22",
+      "ship": "AIDAstella",
+      "cruiseLine": "AIDA",
+      "arrival": "14:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-23",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-24",
+      "ship": "Viking Sea",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-28",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-08-31",
+      "ship": "AIDAstella",
+      "cruiseLine": "AIDA",
+      "arrival": "14:30",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-03",
+      "ship": "Viking Sky",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-06",
+      "ship": "Azamara Journey",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "06:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-07",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-09",
+      "ship": "Aurora",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-13",
+      "ship": "Azamara Quest",
+      "cruiseLine": "Azamara Cruises",
+      "arrival": "06:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-15",
+      "ship": "Crystal Grace",
+      "cruiseLine": "Crystal Cruises",
+      "arrival": "07:00",
+      "departure": "19:00",
+      "callType": "Port of call",
+      "timeInPort": "12h",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-17",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-17",
+      "ship": "Viking Vesta",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-21",
+      "ship": "Seven Seas Voyager",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-09-22",
+      "ship": "Viking Jupiter",
+      "cruiseLine": "Viking Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-23",
+      "ship": "Oceania Aurelia",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": true
+    },
+    {
+      "date": "2028-09-24",
+      "ship": "Silver Nova",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-26",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "11h",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-27",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-27",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-28",
+      "ship": "Ambience",
+      "cruiseLine": "Ambassador Cruise Line",
+      "arrival": "08:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": false
+    },
+    {
+      "date": "2028-09-28",
+      "ship": "Oceania Sonata",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "10:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-09-29",
+      "ship": "Crystal Serenity",
+      "cruiseLine": "Crystal Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-06",
+      "ship": "Silver Nova",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-07",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-09",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "07:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "11h",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-11",
+      "ship": "Iona",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-14",
+      "ship": "Seven Seas Mariner",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-10-15",
+      "ship": "MSC Meraviglia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "07:00",
+      "departure": "16:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-17",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-18",
+      "ship": "Ambition",
+      "cruiseLine": "Ambassador Cruise Line",
+      "arrival": "08:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-23",
+      "ship": "Queen Victoria",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-25",
+      "ship": "Queen Anne",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-25",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-27",
+      "ship": "MSC Sinfonia",
+      "cruiseLine": "MSC Cruises",
+      "arrival": "09:00",
+      "departure": "18:00",
+      "callType": "Port of call",
+      "timeInPort": "9h",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-30",
+      "ship": "SeaDream II",
+      "cruiseLine": "SeaDream Yacht Club",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-10-30",
+      "ship": "Seven Seas Voyager",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-11-01",
+      "ship": "Oceania Sonata",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "publishable": true
+    },
+    {
+      "date": "2028-11-02",
+      "ship": "Majestic Princess",
+      "cruiseLine": "Princess Cruises",
+      "arrival": "09:00",
+      "departure": "21:00",
+      "callType": "Port of call",
+      "timeInPort": "12h",
+      "publishable": false
+    },
+    {
+      "date": "2028-11-06",
+      "ship": "Arcadia",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-11-07",
+      "ship": "Queen Anne",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-11-08",
+      "ship": "Ventura",
+      "cruiseLine": "P & O Cruises",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-11-14",
+      "ship": "Queen Victoria",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-11-20",
+      "ship": "Crystal Serenity",
+      "cruiseLine": "Crystal Cruises",
+      "arrival": "06:00",
+      "departure": "19:00",
+      "callType": "Port of call",
+      "timeInPort": "13h",
+      "publishable": false
+    },
+    {
+      "date": "2028-11-20",
+      "ship": "Seven Seas Grandeur",
+      "cruiseLine": "Regent Seven Seas Cruises",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "notes": "arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-11-21",
+      "ship": "Silver Dawn",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-11-24",
+      "ship": "Silver Shadow",
+      "cruiseLine": "Silversea Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-11-27",
+      "ship": "Seabourn Ovation",
+      "cruiseLine": "Seabourn",
+      "arrival": "07:00",
+      "departure": "17:00",
+      "callType": "Port of call",
+      "timeInPort": "10h",
+      "notes": "arrival only",
+      "publishable": false
+    },
+    {
+      "date": "2028-12-14",
+      "ship": "Queen Anne",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    },
+    {
+      "date": "2028-12-26",
+      "ship": "Oceania Allura",
+      "cruiseLine": "Oceania Cruises",
+      "arrival": "07:00",
+      "departure": "",
+      "callType": "Port of call",
+      "notes": "overnight/next-day timing; arrival only",
+      "publishable": true
+    },
+    {
+      "date": "2028-12-26",
+      "ship": "Queen Victoria",
+      "cruiseLine": "Cunard Line",
+      "arrival": "",
+      "departure": "",
+      "callType": "Port of call",
+      "publishable": false
+    }
+  ]
+}

@@ -19,6 +19,12 @@ import {
   filterEntriesByMonth,
 } from "@/lib/schedule-utils";
 import { hasVerifiedScheduleData } from "@/lib/routes";
+import {
+  FUTURE_2028_SCHEDULE_NOTE,
+  PARTIAL_YEAR_SCHEDULE_NOTE,
+  SCHEDULE_COVERAGE_NOTE,
+  PUBLISH_2028,
+} from "@/data/schedule-wording";
 
 export function ShipScheduleHubView({ port }: { port: ShipSchedulePort }) {
   const entries = getScheduleEntries(port.slug);
@@ -52,9 +58,14 @@ export function ShipScheduleHubView({ port }: { port: ShipSchedulePort }) {
         </div>
       )}
 
-      <div className="mb-8 rounded-xl border border-coastal-100 bg-coastal-50/60 p-5 text-sm text-gray-700">
-        Times, terminals and dates are indicative and compiled from published timetables. Always confirm with your
-        cruise line before booking excursions or transfers.
+      <div className="mb-8 rounded-xl border border-coastal-100 bg-coastal-50/60 p-5 text-sm text-gray-700 space-y-2">
+        <p>{PARTIAL_YEAR_SCHEDULE_NOTE}</p>
+        <p>{SCHEDULE_COVERAGE_NOTE}</p>
+        {PUBLISH_2028 && FUTURE_2028_SCHEDULE_NOTE ? <p>{FUTURE_2028_SCHEDULE_NOTE}</p> : null}
+        <p>
+          Times and dates are indicative. Berth or terminal is shown only when confirmed — otherwise leave it
+          unknown. Always confirm with your cruise line before booking excursions or transfers.
+        </p>
       </div>
 
       {(today.length > 0 || tomorrow.length > 0) && (

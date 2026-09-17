@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-09-17T21:09:16.918Z",
+  "wave": "wave-1a",
+  "port": "lisbon",
+  "displayName": "Lisbon",
+  "portIdentityNote": "Lisbon cruise terminals (Santa Apolónia / Jardim do Tabaco / Alcântara) — no invented berths",
+  "minPublishRows": 15,
+  "counts": {
+    "2026": 178,
+    "2027": 340,
+    "2028_discovery": 175,
+    "2028_published": 24,
+    "public_total": 542
+  },
+  "partial2026": true,
+  "filter2028": {
+    "decision": "PUBLISH",
+    "reason": "validated 24 >= MIN_PUBLISH_ROWS 15 — publish validated only; held 151 restricted/unvalidated",
+    "validatedCount": 24
+  },
+  "timeCompleteness": {
+    "2026": {
+      "total": 178,
+      "arrival": 143,
+      "departure": 88,
+      "both": 88,
+      "neither": 35,
+      "pctBoth": 49.4
+    },
+    "2027": {
+      "total": 340,
+      "arrival": 254,
+      "departure": 168,
+      "both": 167,
+      "neither": 85,
+      "pctBoth": 49.1
+    },
+    "2028": {
+      "total": 24,
+      "arrival": 24,
+      "departure": 11,
+      "both": 11,
+      "neither": 0,
+      "pctBoth": 45.8
+    }
+  },
+  "berthPolicy": "unknown — no generic terminals",
+  "placeholderPurged": true
+}

@@ -14,6 +14,12 @@ import {
   getVerifiedMonthKeys,
 } from "@/data/schedules";
 import {
+  FUTURE_2028_SCHEDULE_NOTE,
+  PARTIAL_YEAR_SCHEDULE_NOTE,
+  PUBLISH_2028,
+  SCHEDULE_COVERAGE_NOTE,
+} from "@/data/schedule-wording";
+import {
   parseScheduleYear,
   parseMonthSlug,
   portHubPath,
@@ -115,6 +121,16 @@ export default async function ShipScheduleSegmentPage({
         <section className="section-padding">
           <div className="container-wide max-w-5xl">
             <Breadcrumbs items={breadcrumbs} />
+
+            {entries.length > 0 && (
+              <div className="mt-6 rounded-xl border border-coastal-100 bg-coastal-50/60 p-5 text-sm text-gray-700 space-y-2">
+                <p>{PARTIAL_YEAR_SCHEDULE_NOTE}</p>
+                {year === 2026 ? <p>{SCHEDULE_COVERAGE_NOTE}</p> : null}
+                {year === 2028 && PUBLISH_2028 && FUTURE_2028_SCHEDULE_NOTE ? (
+                  <p>{FUTURE_2028_SCHEDULE_NOTE}</p>
+                ) : null}
+              </div>
+            )}
 
             {entries.length === 0 && (
               <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-6">
